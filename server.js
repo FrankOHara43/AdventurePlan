@@ -19,11 +19,15 @@ if (!process.env.DATABASE_PASSWORD) {
   process.exit(1);
 }
 
-// Replace password in DB connection string
-const DB = process.env.DATABASE.replace(
-  '<PASSWORD>',
-  process.env.DATABASE_PASSWORD
-);
+// Build DB connection string using DATABASE_PASSWORD
+const encodedPassword = encodeURIComponent(process.env.DATABASE_PASSWORD);
+let DB = process.env.DATABASE;
+
+if (DB.includes('<PASSWORD>')) {
+  DB = DB.replace('<PASSWORD>', encodedPassword);
+} else {
+  DB = DB.replace(/(mongodb\+srv:\/\/[^:]+:)([^@]*)(@.*)/, `$1${encodedPassword}$3`);
+}
 
 // Connect to MongoDB
 mongoose
