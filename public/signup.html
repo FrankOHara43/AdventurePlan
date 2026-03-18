@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,300i,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title>Natours | Sign Up</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav nav--tours">
+        <a href="/overview.html" class="nav__el">All tours</a>
+      </nav>
+      <div class="header__logo">
+        <img src="img/logo-white.png" alt="Natours logo" />
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="login-container">
+        <div class="login-form">
+          <h1>Create Account</h1>
+          <form id="signup-form">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" required />
+            </div>
+            <div class="form-group">
+              <label for="passwordConfirm">Confirm Password:</label>
+              <input type="password" id="passwordConfirm" required />
+            </div>
+            <button type="submit" class="btn btn--green">Sign Up</button>
+          </form>
+          <p>Already have an account? <a href="/login.html">Log In</a></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="index.js?v=20260318"></script>
+  </body>
+</html>
