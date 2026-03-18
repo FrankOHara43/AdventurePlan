@@ -14,13 +14,15 @@ if (!process.env.DATABASE) {
   process.exit(1);
 }
 
-if (!process.env.DATABASE_PASSWORD) {
-  console.error('DATABASE_PASSWORD environment variable is missing');
+const databasePassword = process.env.DATABASE_PASSWORD || process.env.PASSWORD;
+
+if (!databasePassword) {
+  console.error('DATABASE_PASSWORD or PASSWORD environment variable is missing');
   process.exit(1);
 }
 
 // Build DB connection string using DATABASE_PASSWORD
-const encodedPassword = encodeURIComponent(process.env.DATABASE_PASSWORD);
+const encodedPassword = encodeURIComponent(databasePassword);
 let DB = process.env.DATABASE;
 
 if (DB.includes('<PASSWORD>')) {
