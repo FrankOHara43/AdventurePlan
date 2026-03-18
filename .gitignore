@@ -29,6 +29,7 @@ out/
 ### Environment variables ###
 .env
 .env.*
+config.env
 
 ### OS / Editor files ###
 .DS_Store
