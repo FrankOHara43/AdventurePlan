@@ -15,9 +15,9 @@ npm run seed
 npm start
 
 # 5. Open browser
-# - Tours: http://localhost:3000/overview.html
-# - Login: http://localhost:3000/login.html
-# - Signup: http://localhost:3000/signup.html
+# - Tours: https://adventureplan.onrender.com/overview.html
+# - Login: https://adventureplan.onrender.com/login.html
+# - Signup: https://adventureplan.onrender.com/signup.html
 ```
 
 ---
@@ -119,12 +119,12 @@ Password: password123
 
 ### 1. View Tours (No login needed)
 ```
-GET http://localhost:3000/api/v1/tours
+GET https://adventureplan.onrender.com/api/v1/tours
 ```
 
 ### 2. Create Account
 ```
-POST http://localhost:3000/api/v1/users/signup
+POST https://adventureplan.onrender.com/api/v1/users/signup
 {
   "name": "Your Name",
   "email": "you@example.com",
@@ -135,7 +135,7 @@ POST http://localhost:3000/api/v1/users/signup
 
 ### 3. Login
 ```
-POST http://localhost:3000/api/v1/users/login
+POST https://adventureplan.onrender.com/api/v1/users/login
 {
   "email": "you@example.com",
   "password": "password123"
@@ -145,7 +145,7 @@ Copy the returned token
 
 ### 4. Create Tour (Protected)
 ```
-POST http://localhost:3000/api/v1/tours
+POST https://adventureplan.onrender.com/api/v1/tours
 Authorization: Bearer YOUR_TOKEN
 {
   "name": "My Awesome Tour",
@@ -186,6 +186,6 @@ Authorization: Bearer YOUR_TOKEN
 npm install && npm run seed && npm start
 ```
 
-Then open your browser to: **http://localhost:3000/overview.html**
+Then open your browser to: **https://adventureplan.onrender.com/overview.html**
 
 Enjoy! 🎉

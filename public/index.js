@@ -1,7 +1,7 @@
 let authToken = localStorage.getItem('token');
 let allTours = [];
 
-const API_BASE = 'http://localhost:3000/api/v1';
+const API_BASE = 'https://adventureplan.onrender.com/api/v1';
 
 function getAuthHeaders() {
   const headers = { 'Content-Type': 'application/json' };

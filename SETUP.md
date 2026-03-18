@@ -70,7 +70,7 @@ This will create:
 npm start
 ```
 
-The server will start on `http://localhost:3000`
+The server will start on `https://adventureplan.onrender.com`
 
 You should see:
 ```
@@ -84,16 +84,16 @@ CONNECTED TO DB → natours
 ## Using the Application
 
 ### 1. **View Tours**
-- Open browser and go to `http://localhost:3000/overview.html`
+- Open browser and go to `https://adventureplan.onrender.com/overview.html`
 - See all available tours displayed dynamically
 
 ### 2. **Sign Up**
-- Click login/signup in navigation or go to `http://localhost:3000/signup.html`
+- Click login/signup in navigation or go to `https://adventureplan.onrender.com/signup.html`
 - Create new account with name, email, and password
 - You'll be logged in automatically and redirected to overview
 
 ### 3. **Log In**
-- Go to `http://localhost:3000/login.html`
+- Go to `https://adventureplan.onrender.com/login.html`
 - Use credentials:
   - Email: `john@example.com` or `jane@example.com`
   - Password: `password123`
@@ -208,12 +208,12 @@ PORT=5000 npm start
 
 1. **Test API without auth:**
 ```
-GET http://localhost:3000/api/v1/tours
+GET https://adventureplan.onrender.com/api/v1/tours
 ```
 
 2. **Signup:**
 ```
-POST http://localhost:3000/api/v1/users/signup
+POST https://adventureplan.onrender.com/api/v1/users/signup
 Content-Type: application/json
 
 {
@@ -226,7 +226,7 @@ Content-Type: application/json
 
 3. **Login:**
 ```
-POST http://localhost:3000/api/v1/users/login
+POST https://adventureplan.onrender.com/api/v1/users/login
 Content-Type: application/json
 
 {
@@ -237,7 +237,7 @@ Content-Type: application/json
 
 4. **Access protected route:**
 ```
-POST http://localhost:3000/api/v1/tours
+POST https://adventureplan.onrender.com/api/v1/tours
 Authorization: Bearer <token_from_login>
 Content-Type: application/json
 
